@@ -20,15 +20,15 @@
   tags:
   - deployment
   ansible.builtin.import_role: 
-       name: common
-       tasks_from: app-pre-req    
+    name: common
+    tasks_from: app-pre-req    
 
--  name: install dependencies
-   tags:
+- name: install dependencies
+  tags:
   - deployment
-   ansible.builtin.command: npm install
-   args:
-      chdir: /app   
+  ansible.builtin.command: npm install
+  args:
+    chdir: /app   
 
 
 -  name: copy backend service
